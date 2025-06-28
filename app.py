@@ -18,7 +18,7 @@ st.set_page_config(
 @st.cache_data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("E:/VScode/HANDSON_32B/Belajar_Streamlit/data/data_dummy_retail_store.csv")
+    df = pd.read_csv("data/data_dummy_retail_store.csv")
     return df
 
 df_sales = load_data()
