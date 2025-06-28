@@ -26,7 +26,7 @@ df_sales = load_data()
 # -- Fungsi untuk Load Model --
 @st.cache_resource
 def load_model():
-    with open("E:\VScode\HANDSON_32B\Belajar_Streamlit\models\model_sales.pkl", "rb") as f:
+    with open("models/model_sales.pkl", "rb") as f:
         sales_prediction_model, model_features, base_month_ordinal = pickle.load(f)
     return sales_prediction_model, model_features, base_month_ordinal
 
