@@ -16,8 +16,9 @@ st.set_page_config(
 
 # -- Fungsi untuk Load Data Penjualan --
 @st.cache_data
+@st.cache_data
 def load_data():
-    df = pd.read_csv("my_portfolio/data/data_dummy_retail_store.csv")
+    df = pd.read_csv("E:/VScode/HANDSON_32B/Belajar_Streamlit/data/data_dummy_retail_store.csv")
     return df
 
 df_sales = load_data()
@@ -25,7 +26,7 @@ df_sales = load_data()
 # -- Fungsi untuk Load Model --
 @st.cache_resource
 def load_model():
-    with open("E:\VScode\HANDSON_32B\my_portfolio\models\model_sales.pkl", "rb") as f:
+    with open("E:\VScode\HANDSON_32B\Belajar_Streamlit\models\model_sales.pkl", "rb") as f:
         sales_prediction_model, model_features, base_month_ordinal = pickle.load(f)
     return sales_prediction_model, model_features, base_month_ordinal
 
